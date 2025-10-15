@@ -20,9 +20,7 @@ This helps identify whether Adidas is **undervalued or overvalued** compared to 
 ### 💡 What Is Enterprise Value (EV)?
 Think of EV as the **total worth of the company** if someone were to buy the entire business — including debt and excluding excess cash.
 
-\[
-\text{EV} = \text{Market Capitalisation} + \text{Total Debt} - \text{Cash & Cash Equivalents}
-\]
+EV =  Market Capitalisation + Total Debt - Cash & Cash Equivalents
 
 - **Market Cap** = Share price × Number of shares  
 - **Total Debt** = Short-term + Long-term debt  
@@ -60,7 +58,7 @@ Before starting the valuation, we collect and prepare the following:
 - The project’s goal is to **value Adidas AG** using DCF-based models (FCFF, CCF, and ECF).  
 - The main target metric is **Enterprise Value (EV)**.  
 - EV captures the company’s total worth, including debt and cash adjustments.  
-- This step sets the foundation for financial calculations and forecasting in upcoming steps.
+- This step sets the foundation for financial calculations and forecasting in the upcoming steps.
 
 ---
 
