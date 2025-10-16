@@ -102,10 +102,10 @@ FCFF} = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital
 | ----------------- | ---------------- |
 | EBIT              | Operating profit |
 | Tax rate          | 27.4 % Given     |
-| EBIT after tax    | –                |
+| EBIT after tax    | calculated       |
 | Depreciation      | Added back       |
 | CAPEX             | Subtracted       |
-| Δ Working Capital | Assumed –        |
+| Δ Working Capital | Assumed 0        |
 
 ---
 
