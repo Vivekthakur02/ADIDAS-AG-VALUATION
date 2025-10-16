@@ -139,12 +139,6 @@ These forecasted FCFFs will be **discounted using WACC** in the next step to cal
 
 ---
 
-Would you like me to now write **Step 2 (FCFF calculation)** in the same GitHub README style next, so both sections stay consistent?
-
-
-
----
-
 ### 📊 Key Inputs Required
 Before proceeding to valuation, the following data points are collected:
 
