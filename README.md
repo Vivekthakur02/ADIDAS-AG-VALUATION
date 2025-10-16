@@ -1,73 +1,176 @@
-# ADIDAS-AG-VALUATION
+<!-- Project Banner -->
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas Logo" width="180"/>
+</p>
 
-## Adidas Valuation — Step 1
+<h1 align="center">🏢 Adidas Valuation — Step 1</h1>
 
-**Author:** Vivek Thakur  
-**Project:** Adidas AG Valuation (Major Project)  
-**Institution:** IIT Kharagpur  
-**Objective:** Estimating the Enterprise Value (EV) and predicting the fair stock price of Adidas AG.
+<p align="center">
+  <b>Comprehensive Valuation of Adidas AG using DCF-based Methods (FCFF, CCF, and ECF)</b><br>
+  <i>Major Project by Vivek Thakur | IIT Kharagpur</i>
+</p>
 
 ---
 
-## 🧭 Step 1 — Objective & Basic Understanding
+## 📘 Project Overview
+This repository contains the financial valuation of **Adidas AG**, one of the world’s largest sportswear companies.  
+The objective is to estimate the company’s **Enterprise Value (EV)** and derive its **fair stock price** using  
+different discounted cash flow (DCF) approaches.
 
-### 🎯 Objective
-The goal of this project is to **find the true value of Adidas AG** by calculating its **Enterprise Value (EV)** and using it to determine the company’s **fair share price**.  
-This helps identify whether Adidas is **undervalued or overvalued** compared to its market price.
+This README currently covers **Step 1: Objective & Basic Understanding**.  
+Subsequent steps (like FCFF, WACC, and final valuation) will be added later as updates.
+
+---
+
+## 🎯 Step 1 — Objective & Basic Understanding
+
+### 🧭 Project Objective
+To determine the **true value of Adidas AG** by calculating its **Enterprise Value (EV)** and comparing it with  
+the company’s **market value**, helping to identify whether the stock is **undervalued or overvalued**.
 
 ---
 
 ### 💡 What Is Enterprise Value (EV)?
-Think of EV as the **total worth of the company** if someone were to buy the entire business — including debt and excluding excess cash.
+EV represents the **total worth of a company**, including both shareholders’ and debt-holders’ interests.  
+It’s the price one would effectively pay to acquire the entire company.
 
-EV =  Market Capitalisation + Total Debt - Cash & Cash Equivalents
+\[
+\text{EV} = \text{Market Capitalisation} + \text{Total Debt} - \text{Cash \& Cash Equivalents}
+\]
 
 - **Market Cap** = Share price × Number of shares  
 - **Total Debt** = Short-term + Long-term debt  
-- **Cash & Equivalents** = Company’s available liquid funds  
+- **Cash & Equivalents** = Company’s liquid funds  
 
-EV gives a **complete picture** of the company’s value — not just what shareholders own, but also what lenders are owed.
+EV gives a **complete picture** of a company’s value — not just what shareholders own,  
+but also what lenders are owed.
 
 ---
 
 ### 🧮 Valuation Methods Used
-In this project, three valuation models are used (to be explained in later steps):
-1. **FCFF (Free Cash Flow to Firm)** — cash available to all investors before paying interest.  
-2. **CCF (Capital Cash Flow)** — a variation considering both equity and debt cash flows.  
-3. **ECF (Equity Cash Flow)** — cash available only to shareholders after paying interest and debt.
+This project uses three complementary DCF-based valuation approaches:
 
-All three methods lead to estimating Adidas’s **Enterprise Value**, then comparing it with the **actual market value**.
+| Method | Meaning (Simplified) | Focus |
+|:--|:--|:--|
+| **FCFF** | Free Cash Flow to Firm – cash available to all investors before paying interest | Measures total firm value |
+| **CCF** | Capital Cash Flow – variation considering both equity & debt cash flows | Adjusts for tax shields |
+| **ECF** | Equity Cash Flow – cash available to equity holders after paying interest & debt | Focuses on shareholder value |
+
+All three methods ultimately lead to an estimated **Enterprise Value** and implied **fair stock price**.
+
+---
+
+## 🧩 Step 2 — Free Cash Flow to Firm (FCFF)
+
+### 💡 Concept
+
+Free Cash Flow to Firm (FCFF) represents the **cash generated from operations that is available to all providers of capital** — both debt and equity holders.
+It tells us how much cash the business truly produces after paying for its regular operations and investments in assets.
+
+---
+
+### 🧾 Formula
+
+FCFF} = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital 
+
+---
+
+### 🔍 Step-by-Step Explanation
+
+1. **EBIT (Earnings Before Interest and Tax)**
+   Operating profit before financing and tax expenses. Taken directly from the income statement.
+
+2. **(1 − Tax Rate)**
+   Adjusts EBIT for taxes to find after-tax operating income.
+   → In our model, the effective tax rate used = **27.4 %**
+
+3. **+ Depreciation**
+   Non-cash accounting expense added back since it doesn’t reduce cash.
+
+4. **− CAPEX (Capital Expenditure)**
+   Cash spent on new plants, machinery, or technology. This is an actual cash outflow.
+
+5. **− Δ Working Capital**
+   Measures additional cash locked in day-to-day operations.
+   In our project, **change in working capital = 0** was assumed for simplicity.
+
+---
+
+### 🧮 Illustrative Computation (Adidas 2023)
+
+| Item              | Value (€ million)         | Note             |
+| ----------------- | ------------------------- | ---------------- |
+| EBIT              | 1,190                     | Operating profit |
+| Tax rate          | 27.4 %                    | Given            |
+| EBIT after tax    | 1,190 × (1 − 0.274) = 864 | –                |
+| Depreciation      | 700                       | Added back       |
+| CAPEX             | 510                       | Subtracted       |
+| Δ Working Capital | 0                         | Assumed –        |
+
+[
+\text{FCFF} = 864 + 700 - 510 - 0 = \textbf{€ 1,054 million}
+]
+
+---
+
+### 💬 Interpretation
+
+Adidas generated roughly **€ 1.05 billion of free cash flow** in 2023 — the cash available to both debt and equity holders after accounting for its operating and investment needs.
+This serves as the base year cash flow for projecting future values in the DCF model.
+
+---
+
+Would you like me to now format a **Step 3** section (FCFF forecast + discounting setup) in the same GitHub-ready style next?
+
 
 ---
 
 ### 📊 Key Inputs Required
-Before starting the valuation, we collect and prepare the following:
-- **Financial statements:** Revenue, EBITDA, EBIT, Net Income  
+Before proceeding to valuation, the following data points are collected:
+
+- **Financial Statements:** Revenue, EBITDA, EBIT, Net Income  
 - **Depreciation & Amortisation**  
 - **Capital Expenditure (CAPEX)**  
-- **Change in Working Capital** (assumed zero in our project)  
-- **Total Debt & Cash balance**  
-- **Tax rate:** 27.4%  
-- **Interest rate:** 2.48%  
-- **Discount rate (WACC)** — will be derived later  
-- **Number of shares outstanding** and any **buybacks**
+- **Change in Working Capital** (assumed zero in this project)  
+- **Total Debt & Cash Balance**  
+- **Tax Rate:** 27.4 %  
+- **Interest Rate:** 2.48 %  
+- **Discount Rate (WACC):** to be calculated later  
+- **Shares Outstanding** & any **Buybacks**
 
 ---
 
-### 📈 Step 1 Summary
-- The project’s goal is to **value Adidas AG** using DCF-based models (FCFF, CCF, and ECF).  
-- The main target metric is **Enterprise Value (EV)**.  
-- EV captures the company’s total worth, including debt and cash adjustments.  
-- This step sets the foundation for financial calculations and forecasting in the upcoming steps.
+## 🗂️ Repository Files
+| File | Description |
+|:--|:--|
+| `Adidas_Major_Project.xlsx` | Main financial model and valuation calculations |
+| `Copy of MAJOR PROJECT.pdf` | Detailed project report |
+| `Copy of MAJOR PROJECT.pptx` | Presentation slides |
+| `README.md` | Documentation for Step 1 (current file) |
 
 ---
 
-### 🗂️ Repository Files
-- `Adidas_Major_Project.xlsx` — Main valuation model and data.  
-- `Copy of MAJOR PROJECT.pdf` — Project report.  
-- `Copy of MAJOR PROJECT.pptx` — Presentation slides.  
-- `README.md` — This file (Step 1).
+## 👤 Author
+**Vivek Thakur**  
+📍 IIT Kharagpur | Economics & Finance Major  
+💬 *“Turning numbers into stories — valuing businesses beyond the balance sheet.”*
 
 ---
 
-**Next Step →** Step 2 will explain how to compute *Free Cash Flow to Firm (FCFF)* using Adidas’s financial data.
+<p align="center">
+  <b>🔜 Next Step → Step 2: Calculating Free Cash Flow to Firm (FCFF)</b><br>
+  <i>(To be added in the next update)</i>
+</p>
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Project-DCF%20Valuation-blue?style=for-the-badge" alt="DCF Badge"/>
+  <img src="https://img.shields.io/badge/Language-English-lightgrey?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Focus-Finance%20%26%20Valuation-green?style=for-the-badge"/>
+</p>
+
+
+
+
+tep 2 will explain how to compute *Free Cash Flow to Firm (FCFF)* using Adidas’s financial data.
