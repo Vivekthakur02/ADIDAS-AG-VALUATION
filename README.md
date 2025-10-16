@@ -94,8 +94,7 @@ Enterprise Value(2023) = 45220639.85
 
 ---
 
-### 🧾 Step-by-Step Process (Explained in Words)
-
+### 🧾 Step-by-Step Process
 1. **Start with EBIT (Earnings Before Interest and Tax):**
    This represents the company’s operating profit from its core business before paying any interest or tax.
 
@@ -191,7 +190,7 @@ Where:
 
 ---
 
-## 🧩 Verification of FCFF Valuation (Your Table Explanation)
+## 🧩 Verification of FCFF Valuation 
 
 ### 🔹 1️⃣ FCFF Row
 
