@@ -98,18 +98,14 @@ FCFF} = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital
 
 ### 🧮 Illustrative Computation (Adidas 2023)
 
-| Item              | Value (€ million)         | Note             |
-| ----------------- | ------------------------- | ---------------- |
-| EBIT              | 1,190                     | Operating profit |
-| Tax rate          | 27.4 %                    | Given            |
-| EBIT after tax    | 1,190 × (1 − 0.274) = 864 | –                |
-| Depreciation      | 700                       | Added back       |
-| CAPEX             | 510                       | Subtracted       |
-| Δ Working Capital | 0                         | Assumed –        |
-
-[
-\text{FCFF} = 864 + 700 - 510 - 0 = \textbf{€ 1,054 million}
-]
+| Item              | Note             |
+| ----------------- | ---------------- |
+| EBIT              | Operating profit |
+| Tax rate          | 27.4 % Given     |
+| EBIT after tax    | –                |
+| Depreciation      | Added back       |
+| CAPEX             | Subtracted       |
+| Δ Working Capital | Assumed –        |
 
 ---
 
