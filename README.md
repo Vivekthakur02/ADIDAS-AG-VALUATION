@@ -111,6 +111,36 @@ FCFF(2024) = 1560430.19M
 WACC = 0.08
 Enterprise Value(2023) = 45220639.85
 
+#### 🧮 Step-by-Step Forecast Methodology
+
+Revenue Forecast:
+Revenue(t) = Revenue(t−1) × (1 + Growth Rate)
+
+EBIT Calculation:
+EBIT(t) = Revenue(t) × EBIT Margin
+
+After-Tax EBIT:
+EBIT(t) × (1 − Tax Rate)
+
+Add Depreciation & Subtract CAPEX:
+These are assumed to approximately offset each other.
+
+Resulting FCFF:
+FCFF = EBIT(1 − T) + Depreciation − CAPEX
+
+---
+
+### 🧠 Insight
+
+This projection indicates a **steady 5% annual growth in FCFF**, reflecting Adidas’s strong brand, stable operations, and moderate global expansion strategy.
+These forecasted FCFFs will be **discounted using WACC** in the next step to calculate the **Enterprise Value (EV)**.
+
+---
+
+Would you like me to now write **Step 2 (FCFF calculation)** in the same GitHub README style next, so both sections stay consistent?
+
+
+
 ---
 
 ### 📊 Key Inputs Required
