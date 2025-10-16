@@ -111,6 +111,8 @@ FCFF(2024) = 1560430.19M
 WACC = 0.08
 Enterprise Value(2023) = 45220639.85
 
+---
+
 #### 🧮 Step-by-Step Forecast Methodology
 
 Revenue Forecast:
