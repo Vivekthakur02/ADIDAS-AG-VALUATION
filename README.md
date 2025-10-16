@@ -75,25 +75,6 @@ FCFF} = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital
 
 ### 🔍 Step-by-Step Explanation
 
-1. **EBIT (Earnings Before Interest and Tax)**
-   Operating profit before financing and tax expenses. Taken directly from the income statement.
-
-2. **(1 − Tax Rate)**
-   Adjusts EBIT for taxes to find after-tax operating income.
-   → In our model, the effective tax rate used = **27.4 %**
-
-3. **+ Depreciation**
-   Non-cash accounting expense added back since it doesn’t reduce cash.
-
-4. **− CAPEX (Capital Expenditure)**
-   Cash spent on new plants, machinery, or technology. This is an actual cash outflow.
-
-5. **− Δ Working Capital**
-   Measures additional cash locked in day-to-day operations.
-   In our project, **change in working capital = 0** was assumed for simplicity.
-
----
-
 ### 🧮 Illustrative Computation (Adidas 2023)
 
 | Item              | Note             |
@@ -113,29 +94,177 @@ Enterprise Value(2023) = 45220639.85
 
 ---
 
-#### 🧮 Step-by-Step Forecast Methodology
+### 🧾 Step-by-Step Process (Explained in Words)
 
-Revenue Forecast:
-Revenue(t) = Revenue(t−1) × (1 + Growth Rate)
+1. **Start with EBIT (Earnings Before Interest and Tax):**
+   This represents the company’s operating profit from its core business before paying any interest or tax.
 
-EBIT Calculation:
-EBIT(t) = Revenue(t) × EBIT Margin
+2. **Adjust for Taxes:**
+   Multiply EBIT by *(1 − Tax Rate)* to obtain the after-tax operating profit — the profit that actually remains with the company after government obligations.
 
-After-Tax EBIT:
-EBIT(t) × (1 − Tax Rate)
+3. **Add Back Depreciation:**
+   Depreciation reduces accounting profit but does not involve any real cash outflow.
+   Therefore, it is added back to reflect the true cash position.
 
-Add Depreciation & Subtract CAPEX:
-These are assumed to approximately offset each other.
+4. **Subtract Capital Expenditure (CAPEX):**
+   These are actual cash investments made in machinery, technology, buildings, or R&D.
+   Since cash goes out of the company, it is subtracted.
 
-Resulting FCFF:
-FCFF = EBIT(1 − T) + Depreciation − CAPEX
+5. **Adjust for Change in Working Capital:**
+
+   * If working capital increases → cash gets tied up in operations → subtract it.
+   * If working capital decreases → cash is released → add it.
+     *(In our project, this change was assumed to be zero for simplicity.)*
+
+6. **Final Result – FCFF:**
+   The resulting figure after these adjustments represents the **Free Cash Flow to the Firm**,
+   i.e., the cash flow available to all capital providers (both shareholders and lenders).
+
+
+## 🧮 Step 4 — Weighted Average Cost of Capital (WACC) Calculation
+
+### 🎯 Objective
+
+To determine Adidas AG’s **average cost of capital** — i.e., the minimum return required by both **equity investors** and **debt holders**.
+This rate is then used to **discount future Free Cash Flows (FCFF)** to their present value.
 
 ---
 
-### 🧠 Insight
+### ⚙️ Understanding WACC
 
-This projection indicates a **steady 5% annual growth in FCFF**, reflecting Adidas’s strong brand, stable operations, and moderate global expansion strategy.
-These forecasted FCFFs will be **discounted using WACC** in the next step to calculate the **Enterprise Value (EV)**.
+> **WACC** represents the average rate a company must pay to finance its assets, considering both **debt** and **equity** sources.
+> It tells us how expensive it is for Adidas to raise and use capital.
+
+WACC = (E/V × Ke) + (D/V × Kd × (1 – Tax Rate))
+
+Where:
+
+* ( K_e ) = Cost of Equity
+* ( K_d ) = Cost of Debt
+* ( E/V ) = Proportion of Equity in total capital
+* ( D/V ) = Proportion of Debt in total capital
+
+---
+
+### 📊 Input Summary
+
+| Parameter                              | Description                        | Value  |
+| -------------------------------------- | ---------------------------------- | ------ |
+| **Tax Rate**                           | Corporate tax rate                 | 27.4%  |
+| **Risk-free Rate (Rf)**                | German government bond yield       | 4.00%  |
+| **Market Return (Rm)**                 | Average market return              | 8.50%  |
+| **Market Risk Premium (Rp = Rm − Rf)** | Excess return over risk-free rate  | 4.50%  |
+| **Beta (Asset)**                       | Business risk excluding leverage   | 1.11   |
+| **Beta (Equity)**                      | Risk after accounting for leverage | 2.02   |
+| **Cost of Equity (Ke)**                | ( 4% + 2.02 × 4.5% = 13.09% )      | 13.09% |
+| **Cost of Debt (Kd)**                  | Average borrowing rate             | 5.98%  |
+| **Debt-to-Value (D/V)**                | Debt portion in total capital      | 53.04% |
+| **Equity-to-Value (E/V)**              | Equity portion in total capital    | 46.96% |
+
+---
+
+### 🧩 Stepwise Computation
+
+1. **Calculate Cost of Equity (Ke)** using CAPM:
+   [
+   K_e = R_f + \beta_e (R_m - R_f) = 4 + 2.02 × 4.5 = 13.09%
+   ]
+
+2. **Calculate After-tax Cost of Debt (Kd):**
+   [
+   K_d = 5.98 × (1 - 0.274) = 4.34%
+   ]
+
+3. **Combine using capital structure weights:**
+   [
+   WACC = (0.4696 × 13.09) + (0.5304 × 5.98 × 0.726) = 8.45%
+   ]
+
+---
+
+### Final Result
+
+| Type              | WACC      |
+| ----------------- | --------- |
+| **Pre-Tax WACC**  | **9.32%** |
+| **Post-Tax WACC** | **8.45%** |
+
+---
+
+## 🧩 Verification of FCFF Valuation (Your Table Explanation)
+
+### 🔹 1️⃣ FCFF Row
+
+**FCFF:** 2397518 | 2055383 | 1737864 | 1443313 | 1560430
+
+➡️ These values represent the forecasted Free Cash Flow to Firm (FCFF) for 2024–2028, projected for the next 5 years (as discussed in Step 3).
+
+These figures are in million €, and they show slight year-to-year variations — consistent with realistic growth assumptions. 
+
+---
+
+### 🔹 2️⃣ Enterprise Value Row (per year TV base)
+
+**Enterprise Value:** 72953067 | 69479112 | 59564187 | 50362627 | 41826651
+
+➡️ These are intermediate enterprise value projections derived from each year’s FCFF and discount factor.
+Basically, they indicate each year’s discounted cash flow component and terminal-linked values.
+
+---
+
+### 🔹 3️⃣ Total Free Cash Flow (2024–2028)
+
+**Total Free Cash Flow = 9194510**
+
+➡️ The total FCFF for 2024–2028 equals approximately €9.19B.
+This is the unadjusted (undiscounted) cash flow sum. 
+
+---
+
+### 🔹 4️⃣ DCF (Discounted Cash Flow)
+
+**DCF:** 1598085 | 1485810 | 1362444 | 1227145 | 1438838
+
+➡️ These are the same FCFFs, but now discounted at WACC = 8% (0.08).
+Each year’s future cash flow is converted to its present value — known as the *present value of FCFFs*.
+
+---
+
+### 🔹 5️⃣ DCF 2024–2028 (total)
+
+**DCF 2024–2028 = 7112324**
+
+➡️ This represents the sum of all discounted FCFFs, i.e., the *present value* of forecast period (2024–2028) cash flows. 
+
+---
+
+### 🔹 6️⃣ Terminal Value Added
+Terminal Value = the value of the company’s business after the forecast period, representing all future years in one number.
+
+**Enterprise Value (2023) = 45220639.85**
+
+➡️ Meaning:
+
+* Discounted FCFFs (2024–2028) ≈ €7.11 billion
+* Discounted Terminal Value ≈ €38.11 billion
+* Added together → Total Enterprise Value ≈ €45.22 billion
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
