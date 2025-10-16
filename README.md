@@ -109,15 +109,9 @@ FCFF} = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital
 
 ---
 
-### 💬 Interpretation
-
-Adidas generated roughly **€ 1.05 billion of free cash flow** in 2023 — the cash available to both debt and equity holders after accounting for its operating and investment needs.
-This serves as the base year cash flow for projecting future values in the DCF model.
-
----
-
-Would you like me to now format a **Step 3** section (FCFF forecast + discounting setup) in the same GitHub-ready style next?
-
+FCFF(2024) = 1560430.19M
+WACC = 0.08
+Enterprise Value(2023) = 45220639.85
 
 ---
 
