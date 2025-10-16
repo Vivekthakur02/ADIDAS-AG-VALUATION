@@ -34,9 +34,7 @@ the company’s **market value**, helping to identify whether the stock is **und
 EV represents the **total worth of a company**, including both shareholders’ and debt-holders’ interests.  
 It’s the price one would effectively pay to acquire the entire company.
 
-\[
-\text{EV} = \text{Market Capitalisation} + \text{Total Debt} - \text{Cash \& Cash Equivalents}
-\]
+EV} = Market Capitalisation + Total Debt - Cash & Cash Equivalents
 
 - **Market Cap** = Share price × Number of shares  
 - **Total Debt** = Short-term + Long-term debt  
