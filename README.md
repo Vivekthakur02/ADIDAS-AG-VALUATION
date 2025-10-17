@@ -1,4 +1,4 @@
-<!-- Project Banner -->
+<img width="468" height="42" alt="image" src="https://github.com/user-attachments/assets/026d5380-7a53-42ee-9d73-bfab90f06522" /><!-- Project Banner -->
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas Logo" width="180"/>
 </p>
@@ -69,7 +69,7 @@ It tells us how much cash the business truly produces after paying for its regul
 
 ### 🧾 Formula
 
-FCFF} = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital 
+FCFF = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital 
 
 ---
 
@@ -165,19 +165,19 @@ Where:
 ### 🧩 Stepwise Computation
 
 1. **Calculate Cost of Equity (Ke)** using CAPM:
-   [
-   K_e = R_f + \beta_e (R_m - R_f) = 4 + 2.02 × 4.5 = 13.09%
-   ]
+   
+   K_e = R_f + beta_e (R_m - R_f) = 4 + 2.02 × 4.5 = 13.09%
+   
 
 2. **Calculate After-tax Cost of Debt (Kd):**
-   [
+   
    K_d = 5.98 × (1 - 0.274) = 4.34%
-   ]
+   
 
 3. **Combine using capital structure weights:**
-   [
+   
    WACC = (0.4696 × 13.09) + (0.5304 × 5.98 × 0.726) = 8.45%
-   ]
+   
 
 ---
 
@@ -220,7 +220,8 @@ This is the unadjusted (undiscounted) cash flow sum.
 
 ---
 
-### 🔹 4️⃣ DCF (Discounted Cash Flow)
+### 🔹 4️⃣ DCF (Discounted Cash Flow) 
+       _We discount FCFF by WACC_
 
 **DCF:** 1598085 | 1485810 | 1362444 | 1227145 | 1438838
 
@@ -236,10 +237,7 @@ Each year’s future cash flow is converted to its present value — known as th
 ➡️ This represents the sum of all discounted FCFFs, i.e., the *present value* of forecast period (2024–2028) cash flows. 
 
 ---
-
-### 🔹 6️⃣ Terminal Value Added
-Terminal Value = the value of the company’s business after the forecast period, representing all future years in one number.
-
+EV = PV(FCFFs)
 **Enterprise Value (2023) = 45220639.85**
 
 ➡️ Meaning:
@@ -264,6 +262,9 @@ Terminal Value = the value of the company’s business after the forecast period
 
 
 
+### 🔹 6️⃣ Terminal Value Added
+Terminal Value = the value of the company’s business after the forecast period, representing all future years in one number.
+Terminal Value (TV)= **(FCFF of last year​×(1+g)) ​/ (WACC−g)**
 
 ---
 
