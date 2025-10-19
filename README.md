@@ -12,7 +12,7 @@
 
 ---
 
-## 📘 Project Overview
+##  Project Overview
 This repository contains the financial valuation of **Adidas AG**, one of the world’s largest sportswear companies.  
 The objective is to estimate the company’s **Enterprise Value (EV)** and derive its **fair stock price** using  
 different discounted cash flow (DCF) approaches.
@@ -22,15 +22,15 @@ Subsequent steps (like FCFF, WACC, and final valuation) will be added later as u
 
 ---
 
-## 🎯 Step 1 — Objective & Basic Understanding
+##  Objective & Basic Understanding
 
-### 🧭 Project Objective
+###  Project Objective
 To determine the **true value of Adidas AG** by calculating its **Enterprise Value (EV)** and comparing it with  
 the company’s **market value**, helping to identify whether the stock is **undervalued or overvalued**.
 
 ---
 
-### 💡 What Is Enterprise Value (EV)?
+###  What Is Enterprise Value (EV)?
 EV represents the **total worth of a company**, including both shareholders’ and debt-holders’ interests.  
 It’s the price one would effectively pay to acquire the entire company.
 
@@ -45,7 +45,7 @@ but also what lenders are owed.
 
 ---
 
-### 🧮 Valuation Methods Used
+###  Valuation Methods Used
 This project uses three complementary DCF-based valuation approaches:
 
 | Method | Meaning (Simplified) | Focus |
@@ -58,7 +58,7 @@ All three methods ultimately lead to an estimated **Enterprise Value** and impli
 
 ---
 
-## 🧩 Step 2 — Free Cash Flow to Firm (FCFF)
+#  Method 1: Free Cash Flow to Firm (FCFF)
 
 ### 💡 Concept
 
@@ -67,15 +67,15 @@ It tells us how much cash the business truly produces after paying for its regul
 
 ---
 
-### 🧾 Formula
+###  Formula
 
 FCFF = EBIT*(1 - Tax Rate) + Depreciation - CAPEX - ΔWorking Capital 
 
 ---
 
-### 🔍 Step-by-Step Explanation
+###  Step-by-Step Explanation
 
-### 🧮 Illustrative Computation (Adidas 2023)
+###  Illustrative Computation (Adidas 2023)
 
 | Item              | Note             |
 | ----------------- | ---------------- |
@@ -93,16 +93,16 @@ WACC = 0.08
 Enterprise Value(2023) = 45220639.85
 
 ---
-## 🧮 Step 3 — Weighted Average Cost of Capital (WACC) Calculation
+##   Weighted Average Cost of Capital (WACC) Calculation
 
-### 🎯 Objective
+###  Objective
 
 To determine Adidas AG’s **average cost of capital** — i.e., the minimum return required by both **equity investors** and **debt holders**.
 This rate is then used to **discount future Free Cash Flows (FCFF)** to their present value.
 
 ---
 
-### ⚙️ Understanding WACC
+###  Understanding WACC
 
 > **WACC** represents the average rate a company must pay to finance its assets, considering both **debt** and **equity** sources.
 > It tells us how expensive it is for Adidas to raise and use capital.
@@ -118,7 +118,7 @@ Where:
 
 ---
 
-### 📊 Input Summary
+###  Input Summary
 
 | Parameter                              | Description                        | Value  |
 | -------------------------------------- | ---------------------------------- | ------ |
@@ -135,7 +135,7 @@ Where:
 
 ---
 
-### 🧩 Stepwise Computation
+###  Stepwise Computation
 
 1. **Calculate Cost of Equity (Ke)** using CAPM:
    
@@ -163,13 +163,13 @@ Where:
 
 ---
 
-## 🧩 Verification of FCFF Valuation 
-Top row: forecast of yearly cash the business generates.
+##  Verification of FCFF Valuation 
+Top row: forecast of the yearly cash the business generates.
 DCF row: those yearly amounts converted to today’s money using your WACC.
 DCF 2024–2028 = present value of the forecast window.
 Then you compute a Terminal Value (value of all future cash beyond the forecast) using the last-year FCFF and a perpetuity growth assumption, discount it to today, and add it to the DCF sum. That final sum is Enterprise Value.
 
-### 🔹 1️⃣ FCFF Row
+###  1️⃣ FCFF Row
 
 **FCFF:** 2397518 | 2055383 | 1737864 | 1443313 | 1560430
 
@@ -179,7 +179,7 @@ These figures are in million €, and they show slight year-to-year variations �
 
 ---
 
-### 🔹 2️⃣ Enterprise Value Row (per year TV base)
+###  2️⃣ Enterprise Value Row (per year TV base)
 
 **Enterprise Value:** 72953067 | 69479112 | 59564187 | 50362627 | 41826651
 
@@ -188,7 +188,7 @@ Basically, they indicate each year’s discounted cash flow component and termin
 
 ---
 
-### 🔹 3️⃣ Total Free Cash Flow (2024–2028)
+###  3️⃣ Total Free Cash Flow (2024–2028)
 
 **Total Free Cash Flow = 9194510**
 ➡️ The total FCFF for 2024–2028 equals approximately €9.19B.
@@ -196,7 +196,7 @@ This is the unadjusted (undiscounted) cash flow sum.
 
 ---
 
-### 🔹 4️⃣ DCF (Discounted Cash Flow) 
+###  4️⃣ DCF (Discounted Cash Flow) 
        _We discount FCFF by WACC_
 
 **DCF:** 1598085 | 1485810 | 1362444 | 1227145 | 1438838
@@ -206,14 +206,14 @@ Each year’s future cash flow is converted to its present value — known as th
 
 ---
 
-### 🔹 5️⃣ DCF 2024–2028 (total)
+###  5️⃣ DCF 2024–2028 (total)
 
 **DCF 2024–2028 = 7112324**
 
-➡️ This represents the sum of all discounted FCFFs, i.e., the *present value* of forecast period (2024–2028) cash flows. 
+This represents the sum of all discounted FCFFs, i.e., the *present value* of forecast period (2024–2028) cash flows. 
 
 ---
-### 🔹 6️⃣ Terminal Value Added
+###  6️⃣ Terminal Value Added
 Terminal Value = the value of the company’s business after the forecast period, representing all future years in one number.
 Terminal Value (TV)= **(FCFF of last year​×(1+g)) ​/ (WACC−g)**
 
@@ -244,7 +244,7 @@ Predicted (Fair) Share Price = € 230.13
 
 ---
 
-💡 Basic Concept — FCFF vs CCF Valuation
+# Method 2: CCF Valuation
 
 Both FCFF (Free Cash Flow to Firm) and CCF (Capital Cash Flow) methods are used to value the entire firm, but they treat the tax benefit from debt differently.
 
@@ -262,27 +262,21 @@ CCF takes the same FCFF base, but it adds back the interest tax shield explicitl
 
 Since the tax benefit is directly added to the cash flows, these are discounted at the pre-tax WACC.
 
-🧮 Formula:
+Formula:
 CCF = FCFF + (Interest × Tax Rate)
 CCF Valuation: 42,182,864,965B
 Stock Price: €236.25
 
-Perfect, Vivek 🙌 — ye screenshots clearly dikhate hain ki tumne **ECF (Equity Cash Flow)** method ka detailed computation Excel me kar liya tha,
-including **debt schedule**, **principal repayments**, **interest**, aur **terminal value**.
-
-Ab chalo main tumhare liye ye pura explanation likh deta hoon —
-ek **GitHub README-ready version** me, exactly jaisa tumhare Step 7 (CCF) ke liye likha tha.
-
 ---
 
-## 🧩 Step 8 – ECF Valuation (Equity Cash Flow Method)
+# Method 3: ECF Valuation (Equity Cash Flow Method)
 
 The **Equity Cash Flow (ECF)** method focuses solely on the cash available to *equity shareholders* after servicing all debt obligations (interest + principal repayments).
 Unlike the FCFF and CCF models, which measure total firm value, ECF directly estimates the **Equity Value** by discounting equity-specific cash flows using the **cost of equity**.
 
 ---
 
-### 🔹 Formula
+###  Formula
 
 ECF = FCFF − Interest Payments − Principal Repayments + New Debt Issued
 
@@ -300,7 +294,7 @@ ECF = FCFF − Interest Payments − Principal Repayments + New Debt Issued
    These are the actual cash inflows to equity holders after all financing obligations.
 
 4. **Determine Terminal Value for Equity:**
-   Compute terminal value of assets and subtract terminal value of debt:
+   Compute the terminal value of assets and subtract the terminal value of debt:
    
   TV Equity ​= TVAssets ​− TVDebt​
 
@@ -308,7 +302,7 @@ ECF = FCFF − Interest Payments − Principal Repayments + New Debt Issued
    Use the **cost of equity**, derived from CAPM, to discount all future equity cash flows and the terminal equity value back to the present.
 ---
 
-### 🔹 Key Results (from Excel model)
+###  Key Results (from Excel model)
 
 | Year | Cash Flow Available (€ mn) | Principal Payment | **Equity Cash Flow** |
 | ---- | -------------------------: | ----------------: | -------------------: |
@@ -329,24 +323,37 @@ ECF = FCFF − Interest Payments − Principal Repayments + New Debt Issued
 
 ---
 
+##  Final Comparison & Conclusion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+After performing all three valuation methods — **FCFF**, **CCF**, and **ECF** — we can now compare the results to evaluate Adidas AG’s fair value.
+Each method provides a different lens to assess the company’s worth, depending on how debt and tax effects are treated.
 
 ---
 
-## 🗂️ Repository Files
+###  Comparison Table
+
+| Method   | Concept                                                   | Discount Rate Used     | Enterprise Value (EV) | Equity Value | Fair Share Price (€) | Market Price (€) | Inference   |
+| :------- | :-------------------------------------------------------- | :--------------------- | --------------------: | -----------: | -------------------: | ---------------: | :---------- |
+| **FCFF** | Cash available to both debt & equity holders              | After-tax WACC (8.45%) |             € 45.22 B |    ~€ 41.2 B |               ~€ 220 |           176.12 | Undervalued |
+| **CCF**  | Firm cash flow + interest tax shield                      | Pre-tax WACC (9.3%)    |             € 46.31 B |   ~€ 42.18 B |             € 236.25 |           176.12 | Undervalued |
+| **ECF**  | Cash available only to shareholders (after debt payments) | Cost of Equity (≈ 9%)  |                     — |    € 45.07 B |             € 229.29 |           176.12 | Undervalued |
+
+---
+
+###  Summary Table (All Methods Together)
+
+| Method   | EV (Billion €) | Fair Share Price (€) | % Difference vs Market |
+| :------- | -------------: | -------------------: | ---------------------: |
+| **FCFF** |          45.22 |               220.00 |                  +25 % |
+| **CCF**  |          46.31 |               236.25 |                  +34 % |
+| **ECF**  |          45.07 |               229.29 |                  +30 % |
+
+---
+Therefore, based on DCF-based valuation approaches, **Adidas AG was undervalued and represented a long-term buying opportunity**.
+
+---
+
+##  Repository Files
 | File | Description |
 |:--|:--|
 | `Adidas_Major_Project.xlsx` | Main financial model and valuation calculations |
@@ -364,19 +371,7 @@ ECF = FCFF − Interest Payments − Principal Repayments + New Debt Issued
 ---
 
 <p align="center">
-  <b>🔜 Next Step → Step 2: Calculating Free Cash Flow to Firm (FCFF)</b><br>
-  <i>(To be added in the next update)</i>
-</p>
-
----
-
-<p align="center">
   <img src="https://img.shields.io/badge/Project-DCF%20Valuation-blue?style=for-the-badge" alt="DCF Badge"/>
   <img src="https://img.shields.io/badge/Language-English-lightgrey?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Focus-Finance%20%26%20Valuation-green?style=for-the-badge"/>
 </p>
-
-
-
-
-tep 2 will explain how to compute *Free Cash Flow to Firm (FCFF)* using Adidas’s financial data.
