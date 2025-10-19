@@ -93,34 +93,7 @@ WACC = 0.08
 Enterprise Value(2023) = 45220639.85
 
 ---
-
-### 🧾 Step-by-Step Process
-1. **Start with EBIT (Earnings Before Interest and Tax):**
-   This represents the company’s operating profit from its core business before paying any interest or tax.
-
-2. **Adjust for Taxes:**
-   Multiply EBIT by *(1 − Tax Rate)* to obtain the after-tax operating profit — the profit that actually remains with the company after government obligations.
-
-3. **Add Back Depreciation:**
-   Depreciation reduces accounting profit but does not involve any real cash outflow.
-   Therefore, it is added back to reflect the true cash position.
-
-4. **Subtract Capital Expenditure (CAPEX):**
-   These are actual cash investments made in machinery, technology, buildings, or R&D.
-   Since cash goes out of the company, it is subtracted.
-
-5. **Adjust for Change in Working Capital:**
-
-   * If working capital increases → cash gets tied up in operations → subtract it.
-   * If working capital decreases → cash is released → add it.
-     *(In our project, this change was assumed to be zero for simplicity.)*
-
-6. **Final Result – FCFF:**
-   The resulting figure after these adjustments represents the **Free Cash Flow to the Firm**,
-   i.e., the cash flow available to all capital providers (both shareholders and lenders).
-
-
-## 🧮 Step 4 — Weighted Average Cost of Capital (WACC) Calculation
+## 🧮 Step 3 — Weighted Average Cost of Capital (WACC) Calculation
 
 ### 🎯 Objective
 
@@ -134,14 +107,14 @@ This rate is then used to **discount future Free Cash Flows (FCFF)** to their pr
 > **WACC** represents the average rate a company must pay to finance its assets, considering both **debt** and **equity** sources.
 > It tells us how expensive it is for Adidas to raise and use capital.
 
-WACC = (E/V × Ke) + (D/V × Kd × (1 – Tax Rate))
+WACC = E/V × Ke + D/V × Kd × (1 – Tax Rate)
 
 Where:
 
-* ( K_e ) = Cost of Equity
-* ( K_d ) = Cost of Debt
-* ( E/V ) = Proportion of Equity in total capital
-* ( D/V ) = Proportion of Debt in total capital
+* K_e = Cost of Equity
+* K_d = Cost of Debt
+* E/V = Proportion of Equity in total capital
+* D/V = Proportion of Debt in total capital
 
 ---
 
@@ -191,6 +164,10 @@ Where:
 ---
 
 ## 🧩 Verification of FCFF Valuation 
+Top row: forecast of yearly cash the business generates.
+DCF row: those yearly amounts converted to today’s money using your WACC.
+DCF 2024–2028 = present value of the forecast window.
+Then you compute a Terminal Value (value of all future cash beyond the forecast) using the last-year FCFF and a perpetuity growth assumption, discount it to today, and add it to the DCF sum. That final sum is Enterprise Value.
 
 ### 🔹 1️⃣ FCFF Row
 
@@ -214,7 +191,6 @@ Basically, they indicate each year’s discounted cash flow component and termin
 ### 🔹 3️⃣ Total Free Cash Flow (2024–2028)
 
 **Total Free Cash Flow = 9194510**
-
 ➡️ The total FCFF for 2024–2028 equals approximately €9.19B.
 This is the unadjusted (undiscounted) cash flow sum. 
 
@@ -237,6 +213,10 @@ Each year’s future cash flow is converted to its present value — known as th
 ➡️ This represents the sum of all discounted FCFFs, i.e., the *present value* of forecast period (2024–2028) cash flows. 
 
 ---
+### 🔹 6️⃣ Terminal Value Added
+Terminal Value = the value of the company’s business after the forecast period, representing all future years in one number.
+Terminal Value (TV)= **(FCFF of last year​×(1+g)) ​/ (WACC−g)**
+
 EV = PV(FCFFs)
 **Enterprise Value (2023) = 45220639.85**
 
@@ -246,6 +226,107 @@ EV = PV(FCFFs)
 * Discounted Terminal Value ≈ €38.11 billion
 * Added together → Total Enterprise Value ≈ €45.22 billion
 
+2️⃣ Adjusting for Net Debt
+
+To determine the value available solely to shareholders, Net Debt (Debt – Cash & Equivalents) was subtracted from the Enterprise Value:
+
+Equity Value (FCFF) = €41,08,86,39,846 ≈ €41.09 billion
+
+Thus, after accounting for all obligations, the value attributable to equity holders stands at approximately €41 billion.
+
+3️⃣ Deriving the Predicted Share Price
+
+The fair value per share was computed by dividing the total Equity Value by the number of shares outstanding (as of Dec 2023):
+
+Predicted Share Price= €41.09 billion / 17,85,49,084 shares
+
+Predicted (Fair) Share Price = € 230.13
+
+---
+
+💡 Basic Concept — FCFF vs CCF Valuation
+
+Both FCFF (Free Cash Flow to Firm) and CCF (Capital Cash Flow) methods are used to value the entire firm, but they treat the tax benefit from debt differently.
+
+🔹 FCFF (Free Cash Flow to Firm)
+
+FCFF represents the cash generated from operations that is available to all capital providers — both debt and equity holders.
+
+It does not explicitly include the interest tax shield (the tax saving due to interest expense).
+
+The after-tax WACC is used to discount these cash flows since the tax benefit is already embedded in the cost of capital.
+
+
+🔹 CCF (Capital Cash Flow)
+CCF takes the same FCFF base, but it adds back the interest tax shield explicitly to account for the tax advantage from debt financing.
+
+Since the tax benefit is directly added to the cash flows, these are discounted at the pre-tax WACC.
+
+🧮 Formula:
+CCF = FCFF + (Interest × Tax Rate)
+CCF Valuation: 42,182,864,965B
+Stock Price: €236.25
+
+Perfect, Vivek 🙌 — ye screenshots clearly dikhate hain ki tumne **ECF (Equity Cash Flow)** method ka detailed computation Excel me kar liya tha,
+including **debt schedule**, **principal repayments**, **interest**, aur **terminal value**.
+
+Ab chalo main tumhare liye ye pura explanation likh deta hoon —
+ek **GitHub README-ready version** me, exactly jaisa tumhare Step 7 (CCF) ke liye likha tha.
+
+---
+
+## 🧩 Step 8 – ECF Valuation (Equity Cash Flow Method)
+
+The **Equity Cash Flow (ECF)** method focuses solely on the cash available to *equity shareholders* after servicing all debt obligations (interest + principal repayments).
+Unlike the FCFF and CCF models, which measure total firm value, ECF directly estimates the **Equity Value** by discounting equity-specific cash flows using the **cost of equity**.
+
+---
+
+### 🔹 Formula
+
+ECF = FCFF − Interest Payments − Principal Repayments + New Debt Issued
+
+---
+
+###  Step-by-Step Approach
+
+1. **Calculate Available Cash Flow:**
+   Begin with the *cash flow available* from operations (same base as FCFF).
+
+2. **Subtract Principal Repayments and Interest:**
+   Reduce the available cash by yearly debt repayments and interest expenses to determine the residual cash for shareholders.
+
+3. **Obtain Equity Cash Flows for Each Year:**
+   These are the actual cash inflows to equity holders after all financing obligations.
+
+4. **Determine Terminal Value for Equity:**
+   Compute terminal value of assets and subtract terminal value of debt:
+   
+  TV Equity ​= TVAssets ​− TVDebt​
+
+6. **Discount the Equity Cash Flows:**
+   Use the **cost of equity**, derived from CAPM, to discount all future equity cash flows and the terminal equity value back to the present.
+---
+
+### 🔹 Key Results (from Excel model)
+
+| Year | Cash Flow Available (€ mn) | Principal Payment | **Equity Cash Flow** |
+| ---- | -------------------------: | ----------------: | -------------------: |
+| 2024 |                  1 560 430 |        –1 560 430 |                 0.00 |
+| 2025 |                  1 443 314 |        –1 443 314 |                 0.00 |
+| 2026 |                  1 737 865 |        –1 737 865 |                 0.00 |
+| 2027 |                  2 055 383 |         – 821 391 |            1 233 992 |
+| 2028 |                  2 397 518 |                 0 |            2 397 518 |
+
+**Terminal Value (Assets):** € 59.56 million
+**Terminal Value (Equity):** € 58.74 million (= Assets – Debt)
+
+---
+
+**Discounted Equity Cash Flows + Terminal Value** = € 45.07 billion <br> 
+**Actual Market Equity Value (2023)**             = € 40.93 billion <br> 
+**Predicted Share Price (ECF Model)**             = € 229.29 vs € 176.12 (actual)
+
 ---
 
 
@@ -262,24 +343,6 @@ EV = PV(FCFFs)
 
 
 
-### 🔹 6️⃣ Terminal Value Added
-Terminal Value = the value of the company’s business after the forecast period, representing all future years in one number.
-Terminal Value (TV)= **(FCFF of last year​×(1+g)) ​/ (WACC−g)**
-
----
-
-### 📊 Key Inputs Required
-Before proceeding to valuation, the following data points are collected:
-
-- **Financial Statements:** Revenue, EBITDA, EBIT, Net Income  
-- **Depreciation & Amortisation**  
-- **Capital Expenditure (CAPEX)**  
-- **Change in Working Capital** (assumed zero in this project)  
-- **Total Debt & Cash Balance**  
-- **Tax Rate:** 27.4 %  
-- **Interest Rate:** 2.48 %  
-- **Discount Rate (WACC):** to be calculated later  
-- **Shares Outstanding** & any **Buybacks**
 
 ---
 
