@@ -1,9 +1,8 @@
-<img width="468" height="42" alt="image" src="https://github.com/user-attachments/assets/026d5380-7a53-42ee-9d73-bfab90f06522" /><!-- Project Banner -->
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas Logo" width="180"/>
 </p>
 
-<h1 align="center">🏢 Adidas Valuation — Step 1</h1>
+<h1 align="center">🏢 Adidas Valuation </h1>
 
 <p align="center">
   <b>Comprehensive Valuation of Adidas AG using DCF-based Methods (FCFF, CCF, and ECF)</b><br>
