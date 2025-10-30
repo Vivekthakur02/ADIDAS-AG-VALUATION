@@ -18,7 +18,7 @@ different discounted cash flow (DCF) approaches.
 
 This README currently covers **Step 1: Objective & Basic Understanding**.  
 Subsequent steps (like FCFF, WACC, and final valuation) will be added later as updates.
-Canva link : https://www.canva.com/design/DAGBodMupWU/AAZ-W5qio8MaYhGXVLchTw/edit?utm_content=DAGBodMupWU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+Canva link: https://www.canva.com/design/DAGBodMupWU/AAZ-W5qio8MaYhGXVLchTw/edit?utm_content=DAGBodMupWU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ---
 
