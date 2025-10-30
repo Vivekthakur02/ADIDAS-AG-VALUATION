@@ -16,8 +16,6 @@ This repository contains the financial valuation of **Adidas AG**, one of the wo
 The objective is to estimate the company’s **Enterprise Value (EV)** and derive its **fair stock price** using  
 different discounted cash flow (DCF) approaches.
 
-This README currently covers **Step 1: Objective & Basic Understanding**.  
-Subsequent steps (like FCFF, WACC, and final valuation) will be added later as updates.
 Canva link: https://www.canva.com/design/DAGBodMupWU/AAZ-W5qio8MaYhGXVLchTw/edit?utm_content=DAGBodMupWU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ---
@@ -26,7 +24,7 @@ Canva link: https://www.canva.com/design/DAGBodMupWU/AAZ-W5qio8MaYhGXVLchTw/edit
 
 ###  Project Objective
 To determine the **true value of Adidas AG** by calculating its **Enterprise Value (EV)** and comparing it with  
-the company’s **market value**, helping to identify whether the stock is **undervalued or overvalued**.
+The company’s **market value**helps to identify whether the stock is **undervalued or overvalued**.
 
 ---
 
