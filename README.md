@@ -137,12 +137,12 @@ Where:
 
 1. **Calculate Cost of Equity (Ke)** using CAPM:
    
-   K_e = R_f + beta_e (R_m - R_f) = 4 + 2.02 × 4.5 = 13.09%
+   Ke = Rf + βe*(Rm - Rf) = 4 + 2.02 × 4.5 = 13.09%
    
 
 2. **Calculate After-tax Cost of Debt (Kd):**
    
-   K_d = 5.98 × (1 - 0.274) = 4.34%
+   Kd = 5.98 × (1 - 0.274) = 4.34%
    
 
 3. **Combine using capital structure weights:**
@@ -165,7 +165,7 @@ Where:
 Top row: forecast of the yearly cash the business generates.
 DCF row: those yearly amounts converted to today’s money using your WACC.
 DCF 2024–2028 = present value of the forecast window.
-Then you compute a Terminal Value (value of all future cash beyond the forecast) using the last-year FCFF and a perpetuity growth assumption, discount it to today, and add it to the DCF sum. That final sum is Enterprise Value.
+Then compute a Terminal Value (value of all future cash beyond the forecast) using the last-year FCFF and a perpetuity growth assumption, discount it to today, and add it to the DCF sum. That final sum is Enterprise Value.
 
 ###  1️⃣ FCFF Row
 
